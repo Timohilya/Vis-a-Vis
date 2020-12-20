@@ -85,6 +85,7 @@ main {
   border-radius: 10px;
   color: #FFFFFF;
   font: 18px "Roboto-Bold";
+  cursor: pointer;
 }
 
 .overflowLock {
