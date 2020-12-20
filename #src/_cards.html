@@ -1,0 +1,71 @@
+<div id="cards" class="cards">
+  <div class="container">
+    <div class="card" v-for="item in mixItems">
+      <div class="card__photoBox" v-bind:class="{'card__photoBox-loader': item.loader }">
+        <img :src="item.src" :alt="item.alt"> 
+        <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" v-if="item.loader">
+          <g>
+            <animateTransform 
+              id="roulette" 
+              attributeName="transform" 
+              type="rotate" 
+              from="0 50 50" 
+              to="360 50 50" 
+              dur="2s"
+              repeatCount="indefinite"/>
+            <path d="M50 97.5C40.6054 97.5 31.4217 94.7142 23.6104 89.4948C15.7991 84.2754 9.71089 76.857 6.11572 68.1775C2.52056 59.498 1.5799 49.9473 3.4127 40.7332C5.2455 31.5191 9.76943 23.0554 16.4124 16.4124C23.0554 9.76943 31.5191 5.2455 40.7332 3.4127C49.9473 1.5799 59.498 2.52056 68.1775 6.11572C76.857 9.71088 84.2754 15.7991 89.4948 23.6104C94.7142 31.4217 97.5 40.6054 97.5 50" stroke="url(#paint0_linear)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+          </g>
+          <defs>
+            <linearGradient id="paint0_linear" x1="50" y1="0" x2="50" y2="100" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#0093E6"/>
+              <stop offset="1" stop-color="#0093E6" stop-opacity="0"/>
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
+      <p class="card__title">{{ item.title }}</p>
+      <p class="card__subtitle">{{ item.subtitle }}</p>
+      <ul class="card__list" v-for="listItem in item.listItems">
+        <li class="card__item">
+          <p class="card__text">{{ listItem }}</p>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- <div id="items" class="cards">
+  <div class="container">
+    <div class="card" v-for="item in items">
+      <div class="card__photoBox" v-bind:class="{ card__photoBox-loader: loader }">
+        <img v-bind:src="{{ src }}" v-bind:alt="{{ alt }}">
+        <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" v-if="loader">
+          <g>
+            <animateTransform 
+              id="roulette" 
+              attributeName="transform" 
+              type="rotate" 
+              from="0 50 50" 
+              to="360 50 50" 
+              dur="2s"
+              repeatCount="indefinite"/>
+            <path d="M50 97.5C40.6054 97.5 31.4217 94.7142 23.6104 89.4948C15.7991 84.2754 9.71089 76.857 6.11572 68.1775C2.52056 59.498 1.5799 49.9473 3.4127 40.7332C5.2455 31.5191 9.76943 23.0554 16.4124 16.4124C23.0554 9.76943 31.5191 5.2455 40.7332 3.4127C49.9473 1.5799 59.498 2.52056 68.1775 6.11572C76.857 9.71088 84.2754 15.7991 89.4948 23.6104C94.7142 31.4217 97.5 40.6054 97.5 50" stroke="url(#paint0_linear)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+          </g>
+          <defs>
+            <linearGradient id="paint0_linear" x1="50" y1="0" x2="50" y2="100" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#0093E6"/>
+              <stop offset="1" stop-color="#0093E6" stop-opacity="0"/>
+            </linearGradient>
+          </defs>
+        </svg>        
+      </div>
+      <p class="card__title">{{ title }}</p>
+      <p class="card__subtitle">{{ subtitle }}</p>
+      <ul class="card__list" v-for="listItem in listItems">
+        <li class="card__item">
+          <p class="card__text">{{ listItem }}</p>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div> -->

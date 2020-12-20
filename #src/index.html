@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta property="og:title" content="Lorem"> 
+  <meta name="description" content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur, vitae.">
+  <meta property="og:description" content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur, vitae."> 
+  <meta name="twitter:title" content="Lorem">
+  <meta name="twitter:description" content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur, vitae.">
+  <meta property="og:image" content="imgs/logo/logo.ico">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="http://ilya-work.site">
+  <meta property="og:site_name" content="ilya-work.site">
+  <meta name="keywords" content="Lorem, ipsum, dolor" />
+  <link rel="shortcut icon" href="imgs/logo/logo.ico" type="image/x-icon">
+  
+  <link rel="stylesheet" href="css/main.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
+  <script defer src="js/main.min.js"></script>
+  <title>Document</title>
+</head>
+<body>
+  
+  <main>
+    @@include('_navbar.html')
+    @@include('_block-title.html')
+    @@include('_header.html')
+    <div class="sliderIsSimplyVariations">
+      @@include('_slider.html')
+      @@include('_isSimply.html')
+      @@include('_variations.html')
+    </div>
+    @@include('_liveway.html')
+    @@include('_cards.html')
+    @@include('_infoBox.html')
+    @@include('_feedBack.html')
+    @@include('_footer.html')
+  </main>
+  
+</body>
+</html>

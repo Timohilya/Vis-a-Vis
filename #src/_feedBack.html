@@ -1,0 +1,81 @@
+<div class="feedBack">
+  <div class="container">
+    <p class="feedBack__title">
+      Lorem Ipsum is simply dummy text
+    </p>
+    <div class="feedBack__row">
+      <div class="feedBackForm">
+        <p class="feedBackForm__title">
+          It is a long established fact that a reader
+        </p>
+        <form class="feedBackForm__form">
+          <div class="feedBackForm__inputItem">
+            <div class="feedBackForm__inputBox">
+              <input id="name" class="feedBackForm__input" type="text" required="required">
+              <label for="name">Name</label>
+            </div>
+            <p class="feedBackForm__error">
+              * <span>Lorem Ipsum is simply dummy</span>
+            </p>
+          </div>
+          <div class="feedBackForm__row">
+            <div class="feedBackForm__inputItem">
+              <div class="feedBackForm__inputBox">
+                <input id="phone" class="feedBackForm__input" name="phone" type="text" required="required">
+                <label for="phone">Phone</label>
+              </div>
+              <p id="feedBackFormErrorPhone" class="feedBackForm__error">
+                * <span>Lorem Ipsum is simply dummy</span>
+              </p>
+            </div>
+            <div class="feedBackForm__inputItem">
+              <div class="feedBackForm__inputBox">
+                <input id="email" class="feedBackForm__input" name="email" type="text" required="required">
+                <label for="email">E-mail</label>
+              </div>
+              <p id="feedBackFormErrorEmail" class="feedBackForm__error">
+                * <span>Lorem Ipsum is simply dummy</span>
+              </p>
+            </div>
+          </div>
+          <div id="inputRange" class="inputRange">
+            <div class="inputRange__mobileTooltip">
+              <p>{{ value }} грн</p>
+            </div>
+            <vue-slider id="ss" v-model="value" :min=0 :max=7000 :marks="marks" :tooltip="'always'">
+              <template v-slot:tooltip="{ value }">
+                <div class="custom-tooltip">{{ value }} грн</div>
+              </template>
+              <template v-slot:label="{ label, active }">
+                <div :class="['vue-slider-mark-label', 'custom-label', { active }]">{{ label }} грн</div>
+              </template>
+            </vue-slider>
+            <div class="inputRange__mobileMarks">
+              <p>{{ minmark }} грн</p>
+              <p>{{ maxmark }} грн</p>
+            </div>
+          </div>
+          <div class="feedBackForm__buttonRow">
+            <div class="feedBackForm__checkBox">
+              <input id="checkBoxLorem" type="checkbox" required="required">
+              <div class="feedBackForm__checkBoxCustom"></div>
+              <label for="checkBoxLorem">
+                Lorem Ipsum is simply dummy text
+              </label>
+            </div>
+            <input class="feedBackForm__button mainButton" type="submit" value="Lorem Ipsum">
+          </div>
+        </form>
+      </div>
+      <div class="feedBackEmail">
+        <p class="feedBackEmail__title">
+          It is a long established fact that a reader
+        </p>
+        <a class="feedBackEmail__link" href="#">support@email.com</a>
+        <p class="feedBackEmail__text">
+          There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
